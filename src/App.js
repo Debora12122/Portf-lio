@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+function Header() {
+  return (
+    <header>
+      <h1>Meu Portfólio</h1>
+      <nav>
+        <a href="#projects">Projetos</a>
+      </nav>
+    </header>
+  );
+}
+
+function Projects() {
+  return (
+    <section id="projects">
+      <h2>Meus Projetos</h2>
+      <ul>
+        <li>Projeto 1 - Site pessoal</li>
+        <li>Projeto 2 - Loja virtual</li>
+        <li>Projeto 3 - Aplicativo de tarefas</li>
+      </ul>
+    </section>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <Projects />
+      <p>Bem-vindo ao meu portfólio em React!</p>
     </div>
   );
 }
 
 export default App;
+
+
+
