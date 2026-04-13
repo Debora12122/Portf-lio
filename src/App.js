@@ -1,38 +1,31 @@
-function Header() {
-  return (
-    <header>
-      <h1>Meu Portfólio</h1>
-      <nav>
-        <a href="#projects">Projetos</a>
-      </nav>
-    </header>
-  );
-}
-
-function Projects() {
-  return (
-    <section id="projects">
-      <h2>Meus Projetos</h2>
-      <ul>
-        <li>Projeto 1 - Site pessoal</li>
-        <li>Projeto 2 - Loja virtual</li>
-        <li>Projeto 3 - Aplicativo de tarefas</li>
-      </ul>
-    </section>
-  );
-}
+import Header from './components/Header';
+import Projects from './components/Projects';
 
 function App() {
+  const myProjects = [
+    {
+      title: "Projeto 1 - Site pessoal",
+      description: "Um site pessoal simples.",
+      link: "#"
+    },
+    {
+      title: "Projeto 2 - Loja virtual",
+      description: "Uma loja online com carrinho de compras.",
+      link: "#"
+    },
+    {
+      title: "Projeto 3 - Aplicativo de tarefas",
+      description: "Um app para organizar tarefas diárias.",
+      link: "#"
+    }
+  ];
+
   return (
-    <div>
+    <div className="App">
       <Header />
-      <Projects />
-      <p>Bem-vindo ao meu portfólio em React!</p>
+      <Projects projects={myProjects} />
     </div>
   );
 }
 
 export default App;
-
-
-
